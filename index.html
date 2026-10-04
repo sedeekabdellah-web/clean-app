@@ -3,383 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفوة القصيم – شركة صفوة القصيم للتنظيف</title>
-    <!-- استيراد أيقونات Font Awesome وأسماء الخطوط من قوقل -->
+    <title>كلين النظافة | خدمات تنظيف بالقصيم</title>
+    <!-- استيراد الخطوط والأيقونات -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #007bff;
-            --secondary-color: #0056b3;
-            --text-color: #333;
-            --bg-light: #f4f7f6;
-            --white: #ffffff;
-            --accent-color: #28a745;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Cairo', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Cairo', sans-serif;
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-color);
-            line-height: 1.6;
+            background-color: #f4f7f9;
+            color: #333;
+            direction: rtl;
+            text-align: right;
         }
 
-        /* القائمة العلوية الهيدر */
-        nav {
-            background-color: var(--white);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* القسم الرئيسي Hero Section */
+        /* القسم العلوي الهيدر الأزرق */
         header.hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--white);
+            background: linear-gradient(180deg, #0088ff, #0055cc);
+            color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 50px 20px 40px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         header.hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        header.hero h1 span {
-            color: #ffc107;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
 
         header.hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
+            font-size: 1.1rem;
+            max-width: 600px;
             margin: 0 auto 30px;
-            opacity: 0.9;
+            line-height: 1.8;
+            opacity: 0.95;
         }
 
-        .features-badges {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        /* أزرار الاتصال والتواصل */
+        /* حاوية أزرار الاتصال والتواصل */
         .cta-container {
             display: flex;
             justify-content: center;
             gap: 15px;
-            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
         .btn {
+            flex: 1;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 12px 30px;
-            border-radius: 8px;
+            gap: 8px;
+            padding: 12px 10px;
+            border-radius: 25px;
             font-weight: bold;
             text-decoration: none;
             font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            color: var(--white);
-            cursor: pointer;
+            color: white;
+            transition: transform 0.2s, background-color 0.2s;
             border: none;
-            min-width: 180px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         .btn:active {
             transform: scale(0.95);
         }
 
-        .btn-call { background-color: var(--accent-color); }
-        .btn-call:hover { box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); }
-        
-        .btn-whatsapp { background-color: #25d366; }
-        .btn-whatsapp:hover { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+        .btn-call {
+            background-color: #28a745;
+        }
 
-        /* الأقسام والمحتوى */
+        .btn-whatsapp {
+            background-color: #1ed760;
+        }
+
+        /* قسم الخدمات */
         .container {
-            max-width: 1200px;
-            margin: 60px auto;
+            max-width: 800px;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
+        .section-title {
+            font-size: 1.6rem;
+            color: #0055cc;
+            margin-bottom: 25px;
+            border-right: 4px solid #0088ff;
+            padding-right: 12px;
+            font-weight: 700;
         }
 
-        .section-header h2 {
-            font-size: 2rem;
-            color: #222;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .section-header p {
-            color: #666;
-            margin-top: 10px;
-        }
-
-        /* شبكة الخدمات والبطاقات */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
+        /* كروت الخدمات */
         .card {
-            background: var(--white);
-            border-radius: 12px;
+            background: white;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            margin-bottom: 25px;
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s;
+        }
+
+        .card-img-container {
+            width: 100%;
+            height: 200px;
+            background-color: #eaeaea;
             position: relative;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-icon {
-            background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,86,179,0.1));
-            color: var(--primary-color);
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            margin: 30px auto 10px;
+            color: #888;
         }
 
-        .card-number {
+        .card-img-placeholder {
             position: absolute;
             top: 15px;
-            right: 20px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ddd;
+            left: 15px;
+            background: rgba(255,255,255,0.8);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #555;
         }
 
         .card-content {
-            padding: 20px;
-            text-align: center;
-            flex-grow: 1;
+            padding: 25px;
         }
 
         .card h3 {
             font-size: 1.3rem;
             color: #222;
             margin-bottom: 12px;
+            font-weight: 700;
         }
 
         .card p {
-            font-size: 0.95rem;
-            color: #666;
-        }
-
-        /* احصائيات مميزة */
-        .stats-section {
-            background-color: var(--white);
-            padding: 40px 0;
-            margin: 5px 0;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
-        }
-
-        .stats-grid {
-            display: flex;
-            justify-content: space-around;
-            max-width: 1000px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 10px 20px;
-        }
-
-        .stat-item h4 {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .stat-item p {
             font-size: 1rem;
-            color: #555;
-            font-weight: 600;
+            color: #666;
+            line-height: 1.7;
         }
 
-        /* طرق العمل والمناطق */
-        .info-box {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-        }
-
-        .city-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .city-tag {
-            background: #eef2f5;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            color: #444;
-        }
-
-        /* آراء العملاء */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .review-card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            position: relative;
-        }
-
-        .stars {
-            color: #ffc107;
-            margin-bottom: 10px;
-        }
-
-        .review-text {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .reviewer-name {
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: #222;
-        }
-
-        /* أسفل الصفحة الفوتر */
         footer {
-            background-color: #1a1a1a;
-            color: #999;
-            padding: 40px 20px;
             text-align: center;
-            font-size: 0.95rem;
-        }
-
-        footer .footer-title {
-            color: var(--white);
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        footer p { margin-bottom: 15px; }
-
-        .footer-cta {
-            margin: 25px 0;
-        }
-
-        footer .copyright {
-            border-top: 1px solid #333;
-            padding-top: 20px;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 15px; text-align: center; }
-            header.hero h1 { font-size: 2rem; }
-            .stats-grid { flex-direction: column; align-items: center; }
+            padding: 30px 20px;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
 
-    <!-- القائمة العلوية للموقع -->
-    <nav>
-        <a href="#" class="logo">صفوة القصيم</a>
-        <ul class="nav-links">
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#services">خدماتنا</a></li>
-            <li><a href="#cities">مناطق الخدمة</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
-        </ul>
-    </nav>
-
-    <!-- الواجهة واللوحة الأساسية للموقع -->
+    <!-- الجزء العلوي (الهيدر الأزرق) -->
     <header class="hero">
-        <h1>نظافة تليق <span>بمنزلك</span></h1>
+        <h1>كلين النظافة 🧼</h1>
+        <p>أفضل خدمات التنظيف المتكاملة والاحترافية للمنازل والمحلات في منطقة القصيم، عمالة مدربة وأحدث أجهزة البخار والتعقيم.</p>
+        
+        <div class="cta-container">
+            <!-- تم ربط الأزرار برقمك الجديد مباشرة -->
+            <a href="tel:0536909184" class="btn btn-call">
+                <i class="fa-solid fa-phone"></i> اتصل الآن
+            </a>
+            <a href="https://wa.me" class="btn btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> واتساب
+            </a>
+        </div>
+    </header>
+
+    <!-- قسم المحتوى والخدمات -->
+    <div class="container">
+        <h2 class="section-title">خدماتنا المتميزة بالقصيم</h2>
+        
+        <!-- الخدمة الأولى -->
+        <div class="card">
+            <div class="card-img-container">
+                <i class="fa-solid fa-house-chimney fa-3x"></i>
+                <div class="card-img-placeholder">تنظيف منازل وفلل</div>
+            </div>
+            <div class="card-content">
+                <h3>تنظيف الفلل والشقق</h3>
+                <p>تنظيف شامل للغرف، المطابخ، الحمامات، وجلي الأرضيات بأحدث المواد للمباني الجديدة والمسكونة.</p>
+            </div>
+        </div>
+
+        <!-- الخدمة الثانية -->
+        <div class="card">
+            <div class="card-img-container">
+                <i class="fa-solid fa-couch fa-3x"></i>
+                <div class="card-img-placeholder">غسيل مجالس وسجاد</div>
+            </div>
+            <div class="card-content">
+                <h3>غسيل المجالس والفرشات</h3>
+                <p>تنظيف عالي الجودة للكنب، السجاد، والمجالس العربية باستخدام أحدث أجهزة البخار لإزالة الأوساخ والروائح البغيضة.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 كلين النظافة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
