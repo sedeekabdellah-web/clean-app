@@ -1,26 +1,88 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كلين النظافة | خدمات تنظيف متكاملة للمنازل والمحلات</title>
+    <title>كلين النظافة | شركة تنظيف بالقصيم</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f7f6; color: #333; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: inline-block; max-width: 500px; width: 100%; }
-        h1 { color: #007bff; }
-        .btn { display: inline-block; padding: 12px 25px; margin: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; color: white; }
-        .btn-call { background-color: #007bff; }
-        .btn-whatsapp { background-color: #28a745; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; padding-bottom: 60px; }
+        header { background: linear-gradient(135deg, #007bff, #0056b3); color: white; text-align: center; padding: 40px 20px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+        .cta-container { display: flex; justify-content: center; gap: 15px; margin-top: 25px; padding: 0 20px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.05rem; transition: transform 0.2s; width: 100%; max-width: 200px; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .btn:active { transform: scale(0.95); }
+        .btn-call { background-color: #28a745; }
+        .btn-whatsapp { background-color: #25d366; }
+        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .section-title { font-size: 1.5rem; color: #0056b3; margin-bottom: 20px; border-right: 4px solid #007bff; padding-right: 10px; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+        @media (min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h3 { font-size: 1.25rem; color: #111; margin-bottom: 8px; }
+        .card p { font-size: 0.95rem; color: #666; line-height: 1.5; }
+        footer { text-align: center; padding: 20px; color: #888; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>كلين النظافة</h1>
-        <p>خدمات تنظيف متكاملة لشقق، فلل، مجالس، كنب، سجاد، وخزانات ومكيفات بالقصيم.</p>
-        <p>اتصل بنا أو راسلنا الآن:</p>
-        <a href="tel:0536909184" class="btn btn-call">اتصال مباشر</a>
-        <a href="https://wa.me" class="btn btn-whatsapp">تواصل واتساب</a>
+
+    <header>
+        <h1>🧼 كلين النظافة</h1>
+        <p>أفضل خدمات التنظيف المتكاملة والاحترافية للمنازل والمحلات في منطقة القصيم. عمالة مدربة وأحدث أجهزة البخار والتعقيم.</p>
+        <div class="cta-container">
+            <a href="tel:0536909184" class="btn btn-call">📞 اتصل الآن</a>
+            <a href="https://wa.me" class="btn btn-whatsapp">💬 واتساب</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">خدماتنا المتميزة بالقصيم</h2>
+        
+        <div class="grid">
+            <!-- الخدمة 1 -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="تنظيف منازل وفلل">
+                <div class="card-content">
+                    <h3>تنظيف الفلل والشقق</h3>
+                    <p>تنظيف شامل للغرف، المطابخ، الحمامات، وجلي الأرضيات بأحدث المواد للمباني الجديدة والمسكونة.</p>
+                </div>
+            </div>
+
+            <!-- الخدمة 2 -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="غسيل مجالس وسجاد">
+                <div class="card-content">
+                    <h3>غسيل المجالس والفرشات</h3>
+                    <p>تنظيف وتعقيم الكنب، السجاد، والمجالس بأجهزة البخار الحديثة لإزالة أصعب البقع والروائح تماماً.</p>
+                </div>
+            </div>
+
+            <!-- الخدمة 3 -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="تنظيف مكيفات">
+                <div class="card-content">
+                    <h3>تنظيف وصيانة المكيفات</h3>
+                    <p>غسيل مكيفات سبليت وشباك بموقعها دون فوضى، مع فحص الفريون لتحسين برودة التكييف.</p>
+                </div>
+            </div>
+
+            <!-- الخدمة 4 -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="تنظيف خزانات">
+                <div class="card-content">
+                    <h3>غسيل وتعقيم الخزانات</h3>
+                    <p>تفريغ وتطهير خزانات المياه الأرضية والعلوية بمواد آمنة ومصرحة لضمان مياه نظيفة ونقية لأسرتك.</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © كلين النظافة بالقصيم</p>
+    </footer>
+
 </body>
 </html>
