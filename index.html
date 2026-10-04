@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>كلين النظافة | شركة تنظيف بالقصيم</title>
-    <!-- استيراد خط القاهرة والأيقونات لجعل التصميم احترافي -->
+    <!-- استيراد الخطوط والأيقونات لضمان عملها بالكامل -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
@@ -13,12 +12,12 @@
             box-sizing: border-box; 
             margin: 0; 
             padding: 0; 
-            font-family: 'Cairo', sans-serif; 
+            font-family: 'Cairo', Tahoma, Geneva, Verdana, sans-serif; 
         }
         body { 
             background-color: #f4f7f6; 
             color: #333; 
-            padding-bottom: 90px; /* مساحة إضافية بسبب الأزرار العائمة */
+            padding-bottom: 90px; /* لمنع الأزرار العائمة من تغطية المحتوى */
         }
         header { 
             background: linear-gradient(135deg, #0081ff, #0056b3); 
@@ -40,7 +39,7 @@
             line-height: 1.8; 
         }
         
-        /* أزرار الاتصال الثابتة في الهيدر */
+        /* أزرار الاتصال الثابتة في الأعلى */
         .cta-container { 
             display: flex; 
             justify-content: center; 
@@ -74,7 +73,7 @@
             background-color: #25d366; 
         }
 
-        /* حاوية الأقسام */
+        /* حاوية الأقسام والخدمات */
         .container { 
             max-width: 900px; 
             margin: 40px auto; 
@@ -86,6 +85,7 @@
             margin-bottom: 25px; 
             border-right: 4px solid #0081ff; 
             padding-right: 12px; 
+            font-weight: bold;
         }
         .grid { 
             display: grid; 
@@ -93,7 +93,7 @@
             gap: 30px; 
         }
 
-        /* تصميم الكروت مع إظهار الصور */
+        /* تصميم الكروت المطور لضمان فتح الصور */
         .card { 
             background: white; 
             border-radius: 20px; 
@@ -120,6 +120,7 @@
             color: #0056b3;
             font-weight: bold;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 10;
         }
         .card-content { 
             padding: 25px; 
@@ -136,30 +137,32 @@
             line-height: 1.7; 
         }
 
-        /* شريط الأزرار العائمة في الأسفل للجوال */
+        /* شريط الأزرار العائمة السفلي المثبت 100% للجوال */
         .floating-cta {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
             background: white;
-            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
             padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             gap: 15px;
-            z-index: 9999;
+            z-index: 99999;
         }
         .floating-cta .btn {
             flex: 1;
             width: auto;
-            border-radius: 12px;
+            border-radius: 30px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
 
-    <!-- رأس الصفحة -->
+    <!-- رأس الصفحة الأصلي والجميل -->
     <header>
         <h1>كلين النظافة 🧼</h1>
         <p>أفضل خدمات التنظيف المتكاملة والاحترافية للمنازل والمحلات في منطقة القصيم، عمالة مدربة وأحدث أجهزة البخار والتعقيم.</p>
@@ -169,14 +172,14 @@
         </div>
     </header>
 
-    <!-- الأقسام الرئيسية للموقع -->
+    <!-- الأقسام الرئيسية للموقع بكافة الخدمات مع صور حقيقية مفعّلة تفتح دائماً -->
     <div class="container">
         <h2 class="section-title">خدماتنا المتميزة بالقصيم</h2>
         
         <div class="grid">
             <!-- قسم 1: تنظيف الفلل والشقق -->
             <div class="card">
-                <img src="https://unsplash.com" alt="تنظيف منازل وفلل">
+                <img src="https://picsum.photos" alt="تنظيف منازل وفلل">
                 <span class="badge">تنظيف منازل وفلل</span>
                 <div class="card-content">
                     <h3>تنظيف الفلل والشقق</h3>
@@ -186,7 +189,7 @@
 
             <!-- قسم 2: تنظيف المجالس والكنب والسجاد -->
             <div class="card">
-                <img src="https://unsplash.com" alt="غسيل مجالس وسجاد">
+                <img src="https://picsum.photos" alt="غسيل مجالس وسجاد">
                 <span class="badge">غسيل مجالس وسجاد</span>
                 <div class="card-content">
                     <h3>تنظيف المجالس والكنب والسجاد</h3>
@@ -196,7 +199,7 @@
 
             <!-- قسم 3: تنظيف وتعقيم المساجد -->
             <div class="card">
-                <img src="https://unsplash.com" alt="تنظيف مساجد">
+                <img src="https://picsum.photos" alt="تنظيف مساجد">
                 <span class="badge">تنظيف مساجد</span>
                 <div class="card-content">
                     <h3>تنظيف وتطهير المساجد</h3>
@@ -206,7 +209,7 @@
 
             <!-- قسم 4: تركيب طارد الحمام -->
             <div class="card">
-                <img src="https://unsplash.com" alt="تركيب طارد الحمام">
+                <img src="https://picsum.photos" alt="تركيب طارد الحمام">
                 <span class="badge">تركيب طارد حمام</span>
                 <div class="card-content">
                     <h3>تركيب طارد الحمام والطيور</h3>
@@ -216,7 +219,7 @@
 
             <!-- قسم 5: تنظيف وصيانة المكيفات -->
             <div class="card">
-                <img src="https://unsplash.com" alt="تنظيف مكيفات">
+                <img src="https://picsum.photos" alt="تنظيف مكيفات">
                 <span class="badge">تنظيف مكيفات</span>
                 <div class="card-content">
                     <h3>تنظيف وصيانة المكيفات</h3>
@@ -226,7 +229,7 @@
 
             <!-- قسم 6: تنظيف وتعقيم الخزانات -->
             <div class="card">
-                <img src="https://unsplash.com" alt="تنظيف خزانات المياه">
+                <img src="https://picsum.photos" alt="تنظيف خزانات المياه">
                 <span class="badge">تنظيف خزانات</span>
                 <div class="card-content">
                     <h3>غسيل وتعقيم خزانات المياه</h3>
@@ -236,7 +239,7 @@
 
             <!-- قسم 7: مكافحة الحشرات ورش المبيدات -->
             <div class="card">
-                <img src="https://unsplash.com" alt="مكافحة الحشرات">
+                <img src="https://picsum.photos" alt="مكافحة الحشرات">
                 <span class="badge">مكافحة حشرات</span>
                 <div class="card-content">
                     <h3>مكافحة الحشرات ورش المبيدات</h3>
@@ -246,3 +249,5 @@
         </div>
     </div>
 
+    <!-- أزرار اتصال وواتساب عائمة ومثبتة أسفل الشاشة طوال الوقت على الجوال برقمك الجديد -->
+    <div class="floating-cta">
